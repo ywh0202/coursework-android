@@ -4,6 +4,7 @@ package com.example.sign_in;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -57,21 +58,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         //修改用户名item的左侧图标
-      /* mNickName.setLeftIcon(R.drawable.ic_update_user_name);
-        //
-        mNickName.setLeftTitle("修改后的用户名");
-        mNickName.setRightDesc("名字修改");
-        mNickName.setShowRightArrow(false);
-        mNickName.setShowBottomLine(false);
+        mUser_Name.setLeftIcon(R.drawable.ic_update_user_name);
+
+        mUser_Name.setLeftTitle("修改后的用户名");
+        mUser_Name.setRightDesc("名字修改");
+        mUser_Name.setShowRightArrow(false);
+        mUser_Name.setShowBottomLine(false);
 
         //设置用户名整个item的点击事件
-        mNickName.setOnClickListener(new View.OnClickListener() {
+        mUser_Name.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "我是onclick事件显示的", Toast.LENGTH_SHORT).show();
             }
         });
-*/
 
     }
 

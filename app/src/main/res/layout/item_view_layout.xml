@@ -22,7 +22,7 @@
         android:layout_centerInParent="true"
         android:layout_marginLeft="5dp"
         android:layout_toRightOf="@id/left_icon"
-        android:text="姓名"
+        android:text="用户"
         android:textColor="#636363" />
 
     <ImageView

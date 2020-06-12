@@ -60,7 +60,7 @@
         android:layout_width="wrap_content"
         android:layout_height="70dp"
         app:left_icon="@drawable/ic_user_name"
-        app:left_text="用户昵称"
+        app:left_text="用户名"
         app:right_text="鲍忠乐" />
 
     <com.example.sign_in.ItemView
@@ -91,7 +91,7 @@
         android:id="@+id/update_user_name"
         android:layout_width="wrap_content"
         android:layout_height="70dp"
-        app:left_icon="@drawable/ic_update_user_name"
+        app:left_icon="@drawable/update"
         app:left_text="修改昵称"
         app:right_text="" />
     <com.example.sign_in.ItemView
