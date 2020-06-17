@@ -10,6 +10,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button bt_1;
     private Button bt_2;
+    private Button bt_3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +27,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // 跳转到查看签到页面
+            }
+        });
+        bt_3 = findViewById(R.id.bt_3);
+        bt_3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // 跳转到个人中心
             }
         });
     }
