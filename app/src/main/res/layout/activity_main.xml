@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/testView1"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_x="50px"
+        android:layout_y="100dp"
+        android:text="请设置以下信息："
+        android:textSize="35sp" />
+    <TextView
+        android:id="@id/testView2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="400dp"
+        android:layout_y="100dp"
+        android:text="签到名称:"
+        android:inputType="text"
+        android:textSize="25dp"/>
+
+    <EditText
+        android:id="@+id/myEditText1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="50px"
+        android:layout_y="52px"
+        android:inputType="text"
+        android:textSize="30sp"/>
+    <TextView
+        android:id="@+id/testView3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="400dp"
+        android:layout_y="100dp"
+        android:text="签到说明信息:"
+        android:inputType="text"
+        android:textSize="25dp"/>
+    <EditText
+        android:id="@+id/myEditText2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="50px"
+        android:layout_y="52px"
+        android:inputType="text"
+        android:textSize="30sp"/>
+    <TextView
+        android:id="@+id/testView4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="400dp"
+        android:layout_y="100dp"
+        android:text="签到时间限制:"
+        android:inputType="text"
+        android:textSize="25dp"/>
+    <EditText
+        android:id="@+id/myEditText3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="50px"
+        android:layout_y="52px"
+        android:inputType="text"
+        android:textSize="30sp"/>
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="发起签到"
+        android:layout_gravity="center"
+        android:textSize="25dp"/>
+    <TextView
+        android:id="@+id/testView2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_x="33px"
+        android:layout_y="106px"
+        android:layout_gravity="center"
+        android:textSize="24sp"/>
+
+</LinearLayout>
