@@ -8,7 +8,7 @@
     android:orientation="vertical">
 
     <EditText
-        android:id="@id/input_txt2"
+        android:id="@+id/sign_code"
         android:layout_width="300dp"
         android:textSize="18sp"
         android:layout_height="wrap_content"
@@ -16,7 +16,7 @@
         android:hint="生成的签到码："/>
 
     <EditText
-        android:id="@+id/input_txt2"
+        android:id="@+id/state"
         android:layout_width="300dp"
         android:textSize="18sp"
         android:layout_height="wrap_content"
