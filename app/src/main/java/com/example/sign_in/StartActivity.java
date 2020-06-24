@@ -1,5 +1,6 @@
 package com.example.sign_in;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -19,8 +20,10 @@ public class StartActivity extends AppCompatActivity {
         SharedPreferences config = getSharedPreferences("config", MODE_PRIVATE);
         String token = config.getString("token", "");
         if (token.isEmpty()){
-            Log.d("StartActivate", "token is empty");
+            Intent intent = new Intent(this, LoginActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
         }
-        Log.d("StartActivate", token);
+        Intent intent = new Intent(this, HomeActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
     }
 }
