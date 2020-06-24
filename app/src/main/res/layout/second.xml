@@ -7,21 +7,14 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/sign_code"
+    <TextView
+        android:id="@+id/txt3"
         android:layout_width="300dp"
         android:textSize="18sp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:hint="生成的签到码："/>
+        android:hint="生成的签到码和过期时间："/>
 
-    <EditText
-        android:id="@+id/state"
-        android:layout_width="300dp"
-        android:textSize="18sp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:hint="过期时间："/>
 
 
 

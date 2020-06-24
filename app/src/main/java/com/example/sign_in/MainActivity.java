@@ -2,6 +2,7 @@ package com.example.sign_in;
 
 import android.app.DownloadManager;
 import android.graphics.Color;
+import android.media.session.MediaSession;
 import android.os.Bundle;
 import android.app.Activity;
 import android.widget.ImageView ;
@@ -111,8 +112,12 @@ public class MainActivity extends  Activity
             @Override
             public void run() {
                 txt2.setText(result);
+                Intent  intent = new Intent();
+                intent.setClass(MainActivity .this, secondActivity.class) ;
+                Bundle bundle = new Bundle();
+                bundle.putString("text", txt2.getText().toString()) ;
+                intent.putExtras(bundle);
                 finish();
-                Intent  intent = new Intent(MainActivity .this, secondActivity.class);
                 startActivity(intent) ;
 
             }

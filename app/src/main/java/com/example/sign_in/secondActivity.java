@@ -7,12 +7,18 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class secondActivity extends Activity {
-    private EditText sign_code,state;
+    private TextView  txt3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.second);
-        sign_code = (EditText)  findViewById(R.id.sign_code);
-        state = (EditText)  findViewById(R.id.state);
+        txt3 = (TextView ) findViewById(R.id.txt3);
+        Bundle bundle= this.getIntent() .getExtras();
+        String str = bundle .getString("text");
+        txt3.setText(str);
+
+
+
+
     }
 }
