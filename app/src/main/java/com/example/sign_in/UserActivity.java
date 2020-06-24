@@ -2,15 +2,12 @@ package com.example.sign_in;
 
 
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
+
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.CenterCrop;
 
@@ -24,7 +21,7 @@ import jp.wasabeef.glide.transformations.BlurTransformation;
 import jp.wasabeef.glide.transformations.CropCircleTransformation;
 
 
-public class MainActivity extends AppCompatActivity {
+public class UserActivity extends AppCompatActivity {
 
     private ImageView mHBack;
     private ImageView mHHead;
@@ -59,14 +56,14 @@ public class MainActivity extends AppCompatActivity {
                  Button btn1=findViewById(R.id.update_user_passwd);
                  btn1.setOnClickListener(view -> {
                    Intent it =new Intent();
-                   it.setClass(MainActivity.this, Resetpwd.class);
-                   MainActivity.this.startActivity(it);
+                   it.setClass(UserActivity.this, Resetpwd.class);
+                   UserActivity.this.startActivity(it);
         });
                 Button btn2=findViewById(R.id.update_user_name);
                 btn2.setOnClickListener(view -> {
                    Intent it =new Intent();
-                   it.setClass(MainActivity.this, Resetname.class);
-                   MainActivity.this.startActivity(it);
+                   it.setClass(UserActivity.this, Resetname.class);
+                   UserActivity.this.startActivity(it);
         });
             }
 

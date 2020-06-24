@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#F2F2F2"
     android:orientation="vertical"
-    tools:context="com.example.sign_in.MainActivity">
+    tools:context="com.example.sign_in.UserActivity">
 
 
     <RelativeLayout
