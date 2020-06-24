@@ -8,23 +8,24 @@
     android:orientation="vertical"
     tools:context="com.example.sign_in.MainActivity">
 
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+
+
         <ImageView
             android:id="@+id/h_back"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:scaleType="centerCrop"
-            app:srcCompat="@drawable/back3" />
+            android:layout_height="220dp"
+            />
 
         <ImageView
             android:id="@+id/h_head"
             android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/head2" />
+            android:layout_height="200dp"
+            />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -40,22 +41,12 @@
                 android:layout_marginLeft="15dp"
                 android:background="@android:color/white" />
 
-
-            <TextView
-                android:id="@+id/user_val"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="140dp"
-                android:layout_toRightOf="@id/user_line"
-                android:text="151****4743"
-                android:textColor="@android:color/black"
-                android:textSize="17sp" />
         </RelativeLayout>
 
     </RelativeLayout>
 
     <com.example.sign_in.ItemView
-        android:id="@+id/user_Name"
+        android:id="@+id/user_name"
         android:layout_width="wrap_content"
         android:layout_height="70dp"
         app:left_icon="@drawable/ic_user_name"
@@ -78,27 +69,40 @@
         app:left_text="个性签名"
         app:right_text="风一样的男子" />
 
-    <com.example.sign_in.ItemView
+    <Button
         android:id="@+id/update_user_passwd"
         android:layout_marginTop="15dp"
-        android:layout_width="wrap_content"
-        android:layout_height="70dp"
-        app:left_icon="@drawable/ic_update_user_passwd"
-        app:left_text="修改密码"
-        app:right_text="" />
-    <com.example.sign_in.ItemView
+        android:layout_width="410dp"
+        android:layout_height="60dp"
+        android:background="@android:color/white"
+        android:drawableLeft="@drawable/ic_update_user_passwd"
+        android:textSize="16dp"
+        android:textColor="#000000"
+        android:text="修改密码"
+         />
+
+    <Button
         android:id="@+id/update_user_name"
-        android:layout_width="wrap_content"
-        android:layout_height="70dp"
-        app:left_icon="@drawable/update"
-        app:left_text="修改昵称"
-        app:right_text="" />
-    <com.example.sign_in.ItemView
+        android:layout_marginTop="1dp"
+        android:layout_width="410dp"
+        android:layout_height="60dp"
+        android:background="@android:color/white"
+        android:drawableLeft="@drawable/ic_update_user_name"
+        android:textSize="16dp"
+        android:textColor="#000000"
+        android:text="修改昵称"
+         />
+
+    <Button
         android:id="@+id/cancel"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        app:left_icon="@drawable/ic_cancel"
-        app:left_text="注销账号"
-        app:right_text="" />
+        android:layout_marginTop="1dp"
+        android:layout_width="410dp"
+        android:layout_height="60dp"
+        android:background="@android:color/white"
+        android:drawableLeft="@drawable/ic_cancel"
+        android:textSize="16dp"
+        android:textColor="#000000"
+        android:text="注销登录"
+         />
 
 </LinearLayout>

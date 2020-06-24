@@ -63,20 +63,10 @@ public class ItemView extends LinearLayout {
 
         //设置点击事件
         //给整个item设置点击事件
-        rootView.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                listener.itemClick(rightDesc.getText().toString());
-            }
-        });
+        rootView.setOnClickListener(v -> listener.itemClick(rightDesc.getText().toString()));
 
         //给最右侧的小箭头设置点击事件
-        rightArrow.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                listener.itemClick(rightDesc.getText().toString());
-            }
-        });
+        rightArrow.setOnClickListener(v -> listener.itemClick(rightDesc.getText().toString()));
 
         ta.recycle();
     }
@@ -108,6 +98,7 @@ public class ItemView extends LinearLayout {
     public void setShowBottomLine(boolean value) {
         bottomLine.setVisibility(value ? View.VISIBLE : View.INVISIBLE);//设置右侧箭头图标是否显示
     }
+
 
     public interface itemClickListener{
         void itemClick(String text);
