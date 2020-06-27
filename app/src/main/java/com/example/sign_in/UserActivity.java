@@ -16,6 +16,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.zip.Deflater;
 
 import jp.wasabeef.glide.transformations.BlurTransformation;
 import jp.wasabeef.glide.transformations.CropCircleTransformation;
@@ -23,6 +24,7 @@ import jp.wasabeef.glide.transformations.CropCircleTransformation;
 
 public class UserActivity extends AppCompatActivity {
 
+    public static Deflater instance;
     private ImageView mHBack;
     private ImageView mHHead;
     private ImageView mUserLine;
@@ -39,8 +41,7 @@ public class UserActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         initView();
         setData();
-        }
-
+    }
 
 
     private void setData() {
@@ -53,19 +54,19 @@ public class UserActivity extends AppCompatActivity {
                 .bitmapTransform(new CropCircleTransformation(this))
                 .into(mHHead);
 
-                 Button btn1=findViewById(R.id.update_user_passwd);
-                 btn1.setOnClickListener(view -> {
-                   Intent it =new Intent();
-                   it.setClass(UserActivity.this, Resetpwd.class);
-                   UserActivity.this.startActivity(it);
+        Button btn1 = findViewById(R.id.update_user_passwd);
+        btn1.setOnClickListener(view -> {
+            Intent it = new Intent();
+            it.setClass(UserActivity.this, Resetpwd.class);
+            UserActivity.this.startActivity(it);
         });
-                Button btn2=findViewById(R.id.update_user_name);
-                btn2.setOnClickListener(view -> {
-                   Intent it =new Intent();
-                   it.setClass(UserActivity.this, Resetname.class);
-                   UserActivity.this.startActivity(it);
+        Button btn2 = findViewById(R.id.update_user_name);
+        btn2.setOnClickListener(view -> {
+            Intent it = new Intent();
+            it.setClass(UserActivity.this, Resetname.class);
+            UserActivity.this.startActivity(it);
         });
-            }
+    }
 
 
     private void initView() {
@@ -77,51 +78,5 @@ public class UserActivity extends AppCompatActivity {
         mUser_name = (ItemView) findViewById(R.id.user_name);
         mGender = (ItemView) findViewById(R.id.gender);
         mSignname = (ItemView) findViewById(R.id.signName);
-    }
-
-
-    public static void sendHttp(final HttpCallbackListener listener) {
-        new Thread(() -> {
-            URL url;
-            HttpURLConnection connection = null;
-
-            try {
-                url = new URL("http://218.78.85.248:8888");
-                connection = (HttpURLConnection) url.openConnection();
-                connection.setRequestMethod("GET");
-                connection.setConnectTimeout(8000);
-                connection.setReadTimeout(8000);
-                connection.setDoInput(true);
-                connection.setDoOutput(true);
-                // 得到服务器返回数据
-                InputStream inputStream = connection.getInputStream();
-                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
-                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-                StringBuilder response = new StringBuilder();
-                String line;
-                while ((line = bufferedReader.readLine()) != null) {
-                    response.append(line);
-                }
-                if (listener != null) {
-                    listener.onFinish(response.toString());
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-                if (listener != null) {
-                    listener.onError(e);
-                }
-            } finally {
-                if (connection != null) {
-                    connection.disconnect();
-                }
-            }
-        });
-
-    }
-
-    public interface HttpCallbackListener {
-        void onFinish(String response);
-
-        void onError(Exception e);
     }
 }

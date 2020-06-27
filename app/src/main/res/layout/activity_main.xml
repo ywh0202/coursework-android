@@ -51,7 +51,7 @@
         android:layout_height="70dp"
         app:left_icon="@drawable/ic_user_name"
         app:left_text="用户名"
-        app:right_text="鲍忠乐" />
+        app:right_text="" />
 
     <com.example.sign_in.ItemView
         android:id="@+id/gender"

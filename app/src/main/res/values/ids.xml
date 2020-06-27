@@ -13,4 +13,6 @@
     <item name="resetname_edit_name_check" type="id" />
     <item name="resetname_edit_name_new" type="id" />
     <item name="resetpwd_edit_pwd" type="id" />
+    <item name="tv_main_title" type="id" />
+    <item name="tv_back" type="id" />
 </resources>
