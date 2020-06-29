@@ -169,7 +169,7 @@ public class RegisterActivity extends AppCompatActivity {
 
 
                     //config表示文件名, mode_private SharedPreferences sp = getSharedPreferences( );
-                    SharedPreferences sp = getSharedPreferences("config", 0);
+                    SharedPreferences sp = getSharedPreferences("config", MODE_PRIVATE);
 
                     //获取编辑器， SharedPreferences.Editor  editor -> sp.edit();
                     SharedPreferences.Editor editor = sp.edit();
@@ -183,7 +183,7 @@ public class RegisterActivity extends AppCompatActivity {
                     */
 
                     //提交修改
-                    editor.commit();
+                    editor.apply();
                     //editor.apply();
 
                     // savedRegisterToken(userName,psw);
