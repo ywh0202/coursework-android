@@ -1,0 +1,7 @@
+#Mon Jun 29 21:06:47 GMT+08:00 2020
+base.0=D\:\\git\\coursework-android\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
+path.1=classes.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=D\:\\git\\coursework-android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Sign-In</string>
+    <string name="tv_home1">首页</string>
+    <string name="home_bt_1">发起签到</string>
+    <string name="home_bt_2">查看发起的签到</string>
+    <string name="home_bt_3">个人中心</string>
+    <string name="home_et_1">输入签到码</string>
+</resources>
