@@ -102,6 +102,11 @@ public class LoginActivity extends AppCompatActivity {
         }
 
     }
+    public void account_register(View view)
+    {
+        Intent intent = new Intent(this,RegisterActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+    }
 
 }
 
