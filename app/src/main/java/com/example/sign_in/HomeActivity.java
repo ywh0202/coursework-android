@@ -1,4 +1,5 @@
 package com.example.sign_in;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -23,6 +24,8 @@ public class HomeActivity extends AppCompatActivity {
         bt_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), InitsignActivity.class);
+                startActivity(intent);
                 // 跳转到发起签到页面
             }
         });
