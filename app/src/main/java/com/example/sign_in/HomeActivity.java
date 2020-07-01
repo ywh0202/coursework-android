@@ -33,7 +33,8 @@ public class HomeActivity extends AppCompatActivity {
         bt_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // 跳转到查看签到页面
+                Intent intent = new Intent(view.getContext(), ChakanActivity.class);
+                startActivity(intent);/// 跳转到查看签到页面
             }
         });
         bt_3 = findViewById(R.id.bt_3);
