@@ -44,30 +44,39 @@
         </RelativeLayout>
 
     </RelativeLayout>
-
-    <com.example.sign_in.ItemView
+    <TextView
         android:id="@+id/user_name"
-        android:layout_width="wrap_content"
-        android:layout_height="70dp"
-        app:left_icon="@drawable/ic_user_name"
-        app:left_text="用户名"
-        app:right_text="" />
-
-    <com.example.sign_in.ItemView
+        android:layout_marginTop="1dp"
+        android:layout_width="410dp"
+        android:layout_height="50dp"
+        android:background="@android:color/white"
+        android:drawableLeft="@drawable/ic_user_name"
+        android:textColor="#000000"
+        android:textSize="25dp"
+        android:gravity="right" />
+    <TextView
         android:id="@+id/gender"
-        android:layout_width="wrap_content"
-        android:layout_height="70dp"
-        app:left_icon="@drawable/ic_gender"
-        app:left_text="性别"
-        app:right_text="男" />
+        android:layout_marginTop="1dp"
+        android:layout_width="410dp"
+        android:layout_height="50dp"
+        android:background="@android:color/white"
+        android:drawableLeft="@drawable/ic_gender"
+        android:textColor="#000000"
+        android:textSize="25dp"
+        android:gravity="right" />
 
-    <com.example.sign_in.ItemView
-        android:id="@+id/signName"
-        android:layout_width="wrap_content"
-        android:layout_height="70dp"
-        app:left_icon="@drawable/ic_sign_name"
-        app:left_text="个性签名"
-        app:right_text="风一样的男子" />
+    <TextView
+        android:id="@+id/user_account"
+        android:layout_marginTop="1dp"
+        android:layout_width="410dp"
+        android:layout_height="50dp"
+        android:background="@android:color/white"
+        android:drawableLeft="@drawable/ic_user_account"
+        android:textColor="#000000"
+        android:textSize="25dp"
+        android:gravity="right"
+        />
+
 
     <Button
         android:id="@+id/update_user_passwd"
@@ -79,7 +88,7 @@
         android:textSize="16dp"
         android:textColor="#000000"
         android:text="修改密码"
-         />
+        />
 
     <Button
         android:id="@+id/update_user_name"
@@ -91,7 +100,7 @@
         android:textSize="16dp"
         android:textColor="#000000"
         android:text="修改昵称"
-         />
+        />
 
     <Button
         android:id="@+id/cancel"
@@ -103,6 +112,6 @@
         android:textSize="16dp"
         android:textColor="#000000"
         android:text="注销登录"
-         />
+        />
 
 </LinearLayout>
