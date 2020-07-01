@@ -11,10 +11,11 @@ import android.widget.Toast;
 import com.google.gson.Gson;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**代码中TextView参数的说明：   sumnum:签到总人数  desc:签到描述   key:签到码     endtime:截止时间
-                              statue:签到码状态  person:签到人员姓名
+ statue:签到码状态  person:签到人员姓名
  */
 
 
@@ -26,7 +27,6 @@ public class SigninfoActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Log.d("TAG", " ");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.logininfor);
         sumnum = (TextView) this.findViewById(R.id.sumnum);
@@ -45,7 +45,7 @@ public class SigninfoActivity extends Activity {
         String token = config.getString("token", "");
         Log.d("token'infor", token);
         if (!token.isEmpty()) {
-            String param = "sign_id=" + sign_id;
+            String param = "sign_id="+sign_id;
             String result = HttpRequest.sendGet(originAddress, param, token);
             Log.d("result",result);
             Gson gson = new Gson();
@@ -53,7 +53,6 @@ public class SigninfoActivity extends Activity {
             logn_infor lognInfor = gson.fromJson(result, logn_infor.class);
             String state = lognInfor.getState();
             Log.d("inforstate", state);
-
             if (state == "true") {
                 String count1 = lognInfor.getPayloads1().getSign_count();
                 sumnum.setText(count1);
@@ -63,8 +62,9 @@ public class SigninfoActivity extends Activity {
                 key.setText(code);
                 String limit = lognInfor.getPayloads1().getTime_limit();
                 endtime.setText(limit);
-                if(!lognInfor.getPayloads1().getSign_person().isEmpty()) {
-                    List<String> person_name_list = lognInfor.getPayloads1().getSign_person();
+                List<String> person_name_list = lognInfor.getPayloads1().getSign_person();
+                int count=Integer.valueOf(count1).intValue();
+                if(count>0){
                     for (String person_name : person_name_list) {
                         person.setText(person_name);
                     }
@@ -95,7 +95,7 @@ class Payloads1{
     String sign_code;
     String sign_count;
     String sign_message;
-    List<String> sign_person;
+    List<String>  sign_person;
     String time_limit;
     public String getSign_count(){
         return sign_count;
@@ -114,7 +114,3 @@ class Payloads1{
     }
 
 }
-
-
-
-
